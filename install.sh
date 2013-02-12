@@ -30,6 +30,30 @@ fi
 touch .vimrc
 echo "call pathogen#runtime_append_all_bundles()" >> ~/.vimrc
 echo "call pathogen#helptags()" >> ~/.vimrc
+echo "filetype plugin on"
+echo "syntax on" >> ~/.vimrc
 
-# download plugins
-git clone git://github.com/vim-scripts/supertab.git bundle/supertab
+
+# supertab
+git clone git://github.com/ervandew/supertab.git bundle/supertab
+
+# nerdtree
+git clone git://github.com/scrooloose/nerdtree.git bundle/nerdtree
+
+# nerdcommenter
+git clone git://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter
+
+# vim-rails
+git clone git://github.com/tpope/vim-rails.git bundle/vim-rails
+
+# delimitMate
+git clone git://github.com/Raimondi/delimitMate.git bundle/delimitMate
+
+# tagbar
+git clone git://github.com/majutsushi/tagbar.git bundle/tagbar
+
+# snipMate
+git clone git://github.com/msanders/snipmate.vim.git bundle/snipmate
+
+# syntastic
+git clone git://github.com/scrooloose/syntastic.git bundle/syntastic
