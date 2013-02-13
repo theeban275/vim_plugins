@@ -30,9 +30,10 @@ fi
 touch .vimrc
 echo "call pathogen#runtime_append_all_bundles()" >> ~/.vimrc
 echo "call pathogen#helptags()" >> ~/.vimrc
-echo "filetype plugin on"
+echo "filetype plugin on" >> ~/.vimrc
+echo "filetype indent on" >> ~/.vimrc
 echo "syntax on" >> ~/.vimrc
-
+echo "set mouse=a" >> ~/.vimrc
 
 # supertab
 git clone git://github.com/ervandew/supertab.git bundle/supertab
@@ -49,11 +50,9 @@ git clone git://github.com/tpope/vim-rails.git bundle/vim-rails
 # delimitMate
 git clone git://github.com/Raimondi/delimitMate.git bundle/delimitMate
 
-# tagbar
-git clone git://github.com/majutsushi/tagbar.git bundle/tagbar
-
 # snipMate
 git clone git://github.com/msanders/snipmate.vim.git bundle/snipmate
 
 # syntastic
 git clone git://github.com/scrooloose/syntastic.git bundle/syntastic
+
