@@ -7,6 +7,8 @@ set mouse=a
 set number
 set hlsearch
 set pastetoggle=<F2>
+set nowrap
+set tabstop=4
 nnoremap ,/ :nohlsearch<cr>
 nnoremap <c-s> :w<cr>
 inoremap <c-s> <esc>:w<cr>i
