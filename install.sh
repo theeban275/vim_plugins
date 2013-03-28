@@ -7,6 +7,20 @@ if [ -d ~/.vim ]; then
   echo "Created vim plugins backup"
 fi
 
+# backup .vimrc
+if [ -f ~/.vimrc ]; then
+  mv ~/.vimrc ~/vimrc.bak
+  echo "Created vimrc backup"
+fi
+
+# ctrl-s fix for bash
+cp ~/.bash_profile ~/bash_profile.bak
+echo "bind -r '\C-s'" >> ~/.bash_profile
+echo "stty -ixon" >> ~/.bash_profile
+
+# copy .vimrc
+cp $(dirname $0)/.vimrc ~/
+
 # install pathogen
 mkdir ~/.vim
 
@@ -22,26 +36,13 @@ mkdir ~/.vim/bundle
 # cleanup
 rm -rf vim-pathogen
 
-# update .vimrc
-if [ -f ~/.vimrc ]; then
-  mv ~/.vimrc ~/vimrc.bak
-  echo "Created vimrc backup"
-fi
-touch .vimrc
-echo "call pathogen#incubate()" >> ~/.vimrc
-echo "call pathogen#helptags()" >> ~/.vimrc
-echo "filetype plugin on" >> ~/.vimrc
-echo "filetype indent on" >> ~/.vimrc
-echo "syntax on" >> ~/.vimrc
-echo "set mouse=a" >> ~/.vimrc
-
 # supertab
 git clone git://github.com/ervandew/supertab.git bundle/supertab
 
 # nerdtree
 git clone git://github.com/scrooloose/nerdtree.git bundle/nerdtree
 
-# nerdtree
+# nerdtree tabs
 git clone https://github.com/jistr/vim-nerdtree-tabs.git bundle/vim-nerdtree-tabs
 
 # nerdcommenter
