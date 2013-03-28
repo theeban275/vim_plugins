@@ -28,7 +28,7 @@ if [ -f ~/.vimrc ]; then
   echo "Created vimrc backup"
 fi
 touch .vimrc
-echo "call pathogen#runtime_append_all_bundles()" >> ~/.vimrc
+echo "call pathogen#incubate()" >> ~/.vimrc
 echo "call pathogen#helptags()" >> ~/.vimrc
 echo "filetype plugin on" >> ~/.vimrc
 echo "filetype indent on" >> ~/.vimrc
@@ -40,6 +40,9 @@ git clone git://github.com/ervandew/supertab.git bundle/supertab
 
 # nerdtree
 git clone git://github.com/scrooloose/nerdtree.git bundle/nerdtree
+
+# nerdtree
+git clone https://github.com/jistr/vim-nerdtree-tabs.git bundle/vim-nerdtree-tabs
 
 # nerdcommenter
 git clone git://github.com/scrooloose/nerdcommenter.git bundle/nerdcommenter

@@ -10,6 +10,8 @@
 
 * *NERDTree* https://github.com/scrooloose/nerdtree
 
+* *NERDTreeTabs* https://github.com/jistr/vim-nerdtree-tabs
+
 * *NERDCommenter* https://github.com/scrooloose/nerdcommenter
 
 * *Vim-Rails* https://github.com/tpope/vim-rails
