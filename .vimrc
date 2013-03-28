@@ -16,6 +16,6 @@ nnoremap <s-z> <c-r>
 inoremap <s-z> <esc><c-r>i
 nnoremap <c-t> :NERDTreeTabsToggle<cr>
 inoremap <c-t> <esc>:NERDTreeTabsToggle<cr>
-nnoremap <s-d> yyp
-inoremap <s-d> <esc>yypi
+nnoremap <a-d> yyp
+inoremap <a-d> <esc>yypi
 
